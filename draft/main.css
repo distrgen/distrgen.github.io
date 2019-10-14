@@ -11,5 +11,21 @@ display: inline-block;
 */
 
 .bg-light {
-	background: #aaaaaa!important;
+	background: #aaaaaaaa!important;
+}
+
+.mt-64px {
+	margin-top: 64px;
+	padding: 0px;
+	/*border: 1px solid #ff0000;
+	margin-left: 0px;
+	margin-right: 0px;*/
+}
+
+#carouselExampleIndicators {
+	margin-top: 64px;
+}
+
+.w-90 {
+	margin: 0% 4% 0% 4%;
 }

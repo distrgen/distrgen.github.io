@@ -26,15 +26,40 @@
 		<!--/Кнопка меню (Гамбургер)-->
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<!--Элементы меню-->
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
+			<ul class="navbar-nav mx-auto">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  О нас
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">О лаборатории</a>
+						<a class="dropdown-item" href="#">Команда</a>
+						<a class="dropdown-item" href="#">Экспериментальная база</a>
+						<a class="dropdown-item" href="#">Приборный парк</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Направления исследований
+					</a>
+					<div class="dropdown-menu bg-light w-100" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item " href="#">Направление 1</a>
+						<a class="dropdown-item" href="#">Направление 2</a>
+						<a class="dropdown-item" href="#">Направление 3</a>
+						<a class="dropdown-item" href="#">Направление 4</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Аналитическая база</a>
+				</li> 
+				<!-- <li class="nav-item active">
 					<a class="nav-link" href="index.html">О нас</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="index.html">Направления</a>
-				</li>
+					<a class="nav-link" href="index.html">Направления исследований</a>
+				</li>-->
 				<li class="nav-item">
-					<a class="nav-link" href="index.html">Проекты</a>
+					<a class="nav-link" href="index.html">Реализованные проекты</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="index.html">Контакты</a>
@@ -46,7 +71,7 @@
 	<!--/Меню-->
 
 	<!--Карусель-->
-	<div class="container w-75">
+	<!-- <div class="container mt-64px w-100" > -->
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 		  <ol class="carousel-indicators">
 		    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -93,10 +118,10 @@
 		    <span class="sr-only">Next</span>
 		  </a>
 		</div>
-	</div>
+	<!-- </div> -->
 	<!--/Карусель-->
 
-	<div>
+	<div class="w-90">
 		<h2 class="text-center">
 			О нас
 		</h2>
@@ -107,6 +132,97 @@
 	<div>
 		<h2 class="text-center">
 			Наши направления
+		</h2>
+		<div class="row justify-content-center w-90">
+			<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="slide.svg" alt="Направление 1">
+				<div class="card-body text-center">
+					<p class="card-text">
+						Направление 1
+					</p>
+				</div>
+			</div>
+			<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="slide.svg" alt="Направление 1">
+				<div class="card-body text-center">
+					<p class="card-text">
+						Направление 2
+					</p>
+				</div>
+			</div>
+			<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="slide.svg" alt="Направление 1">
+				<div class="card-body text-center">
+					<p class="card-text">
+						Направление 3
+					</p>
+				</div>
+			</div>
+			<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="slide.svg" alt="Направление 1">
+				<div class="card-body text-center">
+					<p class="card-text">
+						Направление 4
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h2 class="text-center my-4">
+			Последние новости
+		</h2>
+		<div class="text-center">
+			<a class="twitter-timeline" data-width="400" data-height="400" data-theme="light" data-chrome="transparent noborders  noheader nofooter" href="https://twitter.com/meduzaproject?ref_src=twsrc%5Etfw">Tweets by meduzaproject</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+	</div>
+	<div>
+		<h2 class="text-center my-4">
+			Партнеры
+		</h2>
+		<div class="row justify-content-center w-90">
+			<div class="card" style="width: 18rem;">
+				<div class="card-body text-center">
+					<h5 class="card-title">Партнер 1</h5>
+				</div>
+				<img class="card-img-bottom" src="slide.svg" alt="Парнер 1">
+			</div>
+			<div class="card" style="width: 18rem;">
+				<div class="card-body text-center">
+					<h5 class="card-title">Партнер 2</h5>
+				</div>
+				<img class="card-img-bottom" src="slide.svg" alt="Парнер 1">
+			</div>
+			<div class="card" style="width: 18rem;">
+				<div class="card-body text-center">
+					<h5 class="card-title">Партнер 3</h5>
+				</div>
+				<img class="card-img-bottom" src="slide.svg" alt="Парнер 1">
+			</div>
+			<div class="card" style="width: 18rem;">
+				<div class="card-body text-center">
+					<h5 class="card-title">Партнер 4</h5>
+				</div>
+				<img class="card-img-bottom" src="slide.svg" alt="Парнер 1">
+			</div>
+			<div class="card" style="width: 18rem;">
+				<div class="card-body text-center">
+					<h5 class="card-title">Партнер 5</h5>
+				</div>
+				<img class="card-img-bottom" src="slide.svg" alt="Парнер 1">
+			</div>
+			<div class="card" style="width: 18rem;">
+				<div class="card-body text-center">
+					<h5 class="card-title">Партнер 6</h5>
+				</div>
+				<img class="card-img-bottom" src="slide.svg" alt="Парнер 1">
+			</div>						
+		</div>
+	</div>
+	<div>
+		<h2 class="text-center my-4">
+			Контакты
 		</h2>
 	</div>
 	<!--Javascript for bootstrap-->
