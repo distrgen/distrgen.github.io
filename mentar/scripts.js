@@ -2,6 +2,7 @@
 let btn_generate = document.getElementById('btnGenerate');
 let btn_submit = document.getElementById('btnSubmit');
 let result;
+let start_time;
 
 
 btn_generate.addEventListener('click', function(){
@@ -63,10 +64,13 @@ btn_generate.addEventListener('click', function(){
 		let stat = document.getElementById('divStatistics');
 		stat.innerHTML = 'Statistics:';
 
+		start_time = performance.now()
+
 
 });
 
 btn_submit.addEventListener('click', function(){
+	calculation_time = performance.now() - start_time;
 	let txt_result = document.getElementById('txtResult');
 	let user_result = +txt_result.value;
 	txt_result.value = '';
@@ -77,8 +81,9 @@ btn_submit.addEventListener('click', function(){
 	
 	let err = Math.round(Math.abs(result - user_result) / result * 100);
 	
-	stat.innerHTML += '<p> Right result:' + result + '</p>';
+	stat.innerHTML += '<p> Right result: ' + result + '</p>';
 	stat.innerHTML += '<p> Your result: ' + user_result + '</p>';
-	stat.innerHTML += '<p> Error:       ' + err + '% </p>';
+	stat.innerHTML += '<p> Error: ' + err + ' %</p>';
+	stat.innerHTML += '<p> Calculation time: ' + Math.round(calculation_time) + ' ms</p>';
 });
 
