@@ -87,3 +87,6 @@ btn_submit.addEventListener('click', function(){
 	stat.innerHTML += '<p> Calculation time: ' + Math.round(calculation_time) + ' ms</p>';
 });
 
+// !Добавить защиту от дурака: сначала нажать submit без предварительного нажатия btn_generate
+// !Проверять, ввел ли пользователь вообще какое-либо число
+// !Switch'и ужасны!
