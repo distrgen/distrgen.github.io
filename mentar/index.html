@@ -6,41 +6,55 @@
 </head>
 <body>
 	<div>
+			<div>
+				Operator type: 
+				<select id="sltOperator">
+					<option>r</option>
+					<option>+</option>
+					<option>-</option>
+					<option>x</option>
+					<!-- <option>//</option>
+					<option>%</option> -->
+				</select>
+			</div>
+			<div>
+				Number of digits of the first operand:
+				<select id="sltDigitNumber_1">
+					<option>1</option>
+					<option selected>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+				</select>
+			</div>
+			<div>
+				Number of digits of the second operand: 
+				<select id="sltDigitNumber_2">
+					<option>1</option>
+					<option selected>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+				</select>
+			</div>
+	</div>
+	<div>
 		<input id="btnGenerate" type="button" value="Generate">
+		
 	</div>
 	<div>
 		<input id="txtFirstOperand" type="text" readonly>
-		<select id="sltDigitNumber_1">
-			<option>1</option>
-			<option selected>2</option>
-			<option>3</option>
-			<option>4</option>
-			<option>5</option>
-			<option>6</option>
-			<option>7</option>
-		</select>
+		
 	<div>
 		<input id="txtOperator" type="text" readonly>
-		<select id="sltOperator">
-			<option>r</option>
-			<option>+</option>
-			<option>-</option>
-			<option>*</option>
-			<!-- <option>//</option>
-			<option>%</option> -->
-		</select>
 	</div>
 	<div>
 		<input id="txtSecondOperand" type="text" readonly>
-		<select id="sltDigitNumber_2">
-			<option>1</option>
-			<option selected>2</option>
-			<option>3</option>
-			<option>4</option>
-			<option>5</option>
-			<option>6</option>
-			<option>7</option>
-		</select>
+		
 	</div>
 	<div>
 		<input id="txtResult" type="number">

@@ -31,7 +31,7 @@ btn_generate.addEventListener('click', function(){
 						operator.value = '-';
 						break;
 					case 3:
-						operator.value = '*';
+						operator.value = 'x';
 						break;
 				}
 				break; 
@@ -41,8 +41,8 @@ btn_generate.addEventListener('click', function(){
 			case '-':
 				operator.value = '-';
 				break;
-			case '*':
-				operator.value = '*';
+			case 'x':
+				operator.value = 'x';
 				break;
 		}
 
@@ -53,7 +53,7 @@ btn_generate.addEventListener('click', function(){
 			case '-':
 				result = +first_operand.value - +second_operand.value;
 				break;
-			case '*':
+			case 'x':
 				result = +first_operand.value * +second_operand.value;
 				break;
 		}
@@ -82,7 +82,7 @@ btn_submit.addEventListener('click', function(){
 	
 	let err = Math.round(Math.abs(result - user_result) / result * 100);
 	
-	stat.innerHTML += '<p> Right result: ' + result + '</p>';
+	stat.innerHTML += '<p> Correct result: ' + result + '</p>';
 	stat.innerHTML += '<p> Your result: ' + user_result + '</p>';
 	stat.innerHTML += '<p> Error: ' + err + ' %</p>';
 	stat.innerHTML += '<p> Calculation time: ' + Math.round(calculation_time) + ' ms</p>';
