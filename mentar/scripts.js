@@ -64,7 +64,8 @@ btn_generate.addEventListener('click', function(){
 		let stat = document.getElementById('divStatistics');
 		stat.innerHTML = 'Statistics:';
 
-		start_time = performance.now()
+		txt_result.focus();
+		start_time = performance.now();
 
 
 });
