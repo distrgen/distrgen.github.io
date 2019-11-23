@@ -5,7 +5,8 @@
 	<link href="styles.css" rel="stylesheet">
 </head>
 <body>
-	<div>
+	<div class="content">
+		<div>
 			<div>
 				Operator type: 
 				<select id="sltOperator">
@@ -41,30 +42,31 @@
 					<option>7</option>
 				</select>
 			</div>
+		</div>
+		<div>
+			<input id="btnGenerate" type="button" value="Generate">
+			
+		</div>
+		<div>
+			<input id="txtFirstOperand" type="text" readonly>
+			
+		<div>
+			<input id="txtOperator" type="text" readonly>
+		</div>
+		<div>
+			<input id="txtSecondOperand" type="text" readonly>
+			
+		</div>
+		<div>
+			<input id="txtResult" type="number">
+		</div>
+		<div>
+			<input id="btnSubmit" type="button" value="Submit">
+		</div>
+		<div id="divStatistics">
+			Statistics:
+		</div>
+		<script src="scripts.js"></script>
 	</div>
-	<div>
-		<input id="btnGenerate" type="button" value="Generate">
-		
-	</div>
-	<div>
-		<input id="txtFirstOperand" type="text" readonly>
-		
-	<div>
-		<input id="txtOperator" type="text" readonly>
-	</div>
-	<div>
-		<input id="txtSecondOperand" type="text" readonly>
-		
-	</div>
-	<div>
-		<input id="txtResult" type="number">
-	</div>
-	<div>
-		<input id="btnSubmit" type="button" value="Submit">
-	</div>
-	<div id="divStatistics">
-		Statistics:
-	</div>
-	<script src="scripts.js"></script>
 </body>
 </html>

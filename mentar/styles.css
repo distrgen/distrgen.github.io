@@ -6,14 +6,28 @@
 }
 
 body {
-	/*width: 600px;*/
 	text-align: center;
 	/*border: 1px solid;*/
+}
+
+.content {
+	width: 600px;
+	text-align: center;
 }
 
 #btnGenerate {
 	width: 100%;
 	border: 1px solid #000000;
+	height: 64px;
+	margin: 8px 0px 8px 0px;
+}
+
+#btnSubmit {
+	width: 100%;
+	border: 1px solid #000000;
+	height: 64px;
+	margin: 8px 0px 8px 0px;
+
 }
 
 /*#sltOperator {
