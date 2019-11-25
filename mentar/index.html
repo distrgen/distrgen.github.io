@@ -6,47 +6,95 @@
 </head>
 <body>
 	<div class="content">
-		<div>
-			<div>
-				Operator type: 
-				<select id="sltOperator">
-					<option>r</option>
-					<option>+</option>
-					<option>-</option>
-					<option>x</option>
-					<!-- <option>//</option>
-					<option>%</option> -->
-				</select>
+		<h1>
+			Mental arithmetic
+		</h1>
+		<button id="btnOptions">
+			Options
+		</button>
+		<section id="stnOptions">
+			<div id="options_content">
+				<div>
+					<h3>
+						Operator type: 
+					</h3>
+					<select id="sltOperator">
+						<option>r</option>
+						<option>+</option>
+						<option>-</option>
+						<option>x</option>
+						<!-- <option>//</option>
+						<option>%</option> -->
+					</select>
+				</div>
+				<div>
+					<h3>
+						Number of digits of the
+					</h3>
+					<div>
+						<div>
+							<h3>
+								1 operand:
+							</h3>
+							<select id="sltDigitNumber_1">
+								<option>1</option>
+								<option selected>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+							</select>
+						</div>
+						<div>
+							<h3>
+								2 operand:
+							</h3>
+							<select id="sltDigitNumber_2">
+								<option>1</option>
+								<option selected>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<!-- <div>
+					<h3>
+						Number of digits of the first operand:
+					</h3>
+					<select id="sltDigitNumber_1">
+						<option>1</option>
+						<option selected>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+					</select>
+				</div>
+				<div>
+					<h3>
+						Number of digits of the second operand: 
+					</h3>
+					<select id="sltDigitNumber_2">
+						<option>1</option>
+						<option selected>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+					</select>
+				</div> -->
 			</div>
-			<div>
-				Number of digits of the first operand:
-				<select id="sltDigitNumber_1">
-					<option>1</option>
-					<option selected>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-					<option>6</option>
-					<option>7</option>
-				</select>
-			</div>
-			<div>
-				Number of digits of the second operand: 
-				<select id="sltDigitNumber_2">
-					<option>1</option>
-					<option selected>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-					<option>6</option>
-					<option>7</option>
-				</select>
-			</div>
-		</div>
-		<div>
-			<input id="btnGenerate" type="button" value="Generate">
-			
-		</div>
+		</section>
+		<button id="btnGenerate">
+			Generate
+		</button>
 		<div>
 			<input id="txtFirstOperand" type="text" readonly>
 			
@@ -60,9 +108,9 @@
 		<div>
 			<input id="txtResult" type="number">
 		</div>
-		<div>
-			<input id="btnSubmit" type="button" value="Submit">
-		</div>
+		<button id="btnSubmit">
+			Submit
+		</button>
 		<div id="divStatistics">
 			Statistics:
 		</div>

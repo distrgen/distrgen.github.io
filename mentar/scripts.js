@@ -1,6 +1,7 @@
 
 let btn_generate = document.getElementById('btnGenerate');
 let btn_submit = document.getElementById('btnSubmit');
+let btn_options = document.getElementById('btnOptions');
 let result;
 let start_time;
 
@@ -88,6 +89,15 @@ btn_submit.addEventListener('click', function(){
 	stat.innerHTML += '<p> Calculation time: ' + Math.round(calculation_time) + ' ms</p>';
 });
 
+btn_options.addEventListener('click', function(){
+	let stn_options = document.getElementById('stnOptions');
+	if (stn_options.style.display == 'none' || stn_options.style.display =='') {
+		stn_options.style.display = 'block';
+	} 
+	else {
+		stnOptions.style.display = 'none';
+	}
+});
 // !Добавить защиту от дурака: сначала нажать submit без предварительного нажатия btn_generate
 // !Проверять, ввел ли пользователь вообще какое-либо число
 // !Switch'и ужасны!
