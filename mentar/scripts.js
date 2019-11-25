@@ -62,9 +62,6 @@ btn_generate.addEventListener('click', function(){
 		let txt_result = document.getElementById('txtResult');
 		txt_result.value = '';
 
-		let stat = document.getElementById('divStatistics');
-		stat.innerHTML = 'Statistics:';
-
 		txt_result.focus();
 		start_time = performance.now();
 
@@ -76,23 +73,21 @@ btn_submit.addEventListener('click', function(){
 	let txt_result = document.getElementById('txtResult');
 	let user_result = +txt_result.value;
 	txt_result.value = '';
+	
+	let err = Math.round(Math.abs(result - user_result) / result * 10000.0) / 100.0;
+	document.getElementById('pCorrectAnswer').innerHTML = result;
+	document.getElementById('pGivenAnswer').innerHTML = user_result;
+	document.getElementById('pError').innerHTML = err + ' %';
+	document.getElementById('pTime').innerHTML = Math.round(calculation_time) + ' ms';
 
 	
-	let stat = document.getElementById('divStatistics');
-	stat.innerHTML = 'Statistics:';
 	
-	let err = Math.round(Math.abs(result - user_result) / result * 100);
-	
-	stat.innerHTML += '<p> Correct result: ' + result + '</p>';
-	stat.innerHTML += '<p> Your result: ' + user_result + '</p>';
-	stat.innerHTML += '<p> Error: ' + err + ' %</p>';
-	stat.innerHTML += '<p> Calculation time: ' + Math.round(calculation_time) + ' ms</p>';
 });
 
 btn_options.addEventListener('click', function(){
 	let stn_options = document.getElementById('stnOptions');
 	if (stn_options.style.display == 'none' || stn_options.style.display =='') {
-		stn_options.style.display = 'block';
+		stn_options.style.display = 'flex';
 	} 
 	else {
 		stnOptions.style.display = 'none';
