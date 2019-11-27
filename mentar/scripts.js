@@ -2,6 +2,7 @@
 let btn_generate = document.getElementById('btnGenerate');
 let btn_submit = document.getElementById('btnSubmit');
 let btn_options = document.getElementById('btnOptions');
+let txt_result = document.getElementById('txtResult');
 let result;
 let start_time;
 
@@ -78,10 +79,7 @@ btn_submit.addEventListener('click', function(){
 	document.getElementById('pCorrectAnswer').innerHTML = result;
 	document.getElementById('pGivenAnswer').innerHTML = user_result;
 	document.getElementById('pError').innerHTML = err + ' %';
-	document.getElementById('pTime').innerHTML = Math.round(calculation_time) + ' ms';
-
-	
-	
+	document.getElementById('pTime').innerHTML = Math.round(calculation_time) + ' ms';	
 });
 
 btn_options.addEventListener('click', function(){
@@ -93,6 +91,22 @@ btn_options.addEventListener('click', function(){
 		stnOptions.style.display = 'none';
 	}
 });
+
+txt_result.addEventListener('keydown', function(e){
+	if (e.keyCode === 13) {
+		btn_submit.click();
+	}
+});
 // !Добавить защиту от дурака: сначала нажать submit без предварительного нажатия btn_generate
 // !Проверять, ввел ли пользователь вообще какое-либо число
 // !Switch'и ужасны!
+
+// !Проверить по поводу анонимности функций
+// (function() {
+//   document.querySelector('input').addEventListener('keydown', function(e) {
+//     if (e.keyCode === 13) {
+//       // можете делать все что угодно со значением текстового поля
+//       console.log(this.value);
+//     }
+//   });
+// })();
