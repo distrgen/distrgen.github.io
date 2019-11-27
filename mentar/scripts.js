@@ -7,7 +7,8 @@ let result;
 let start_time;
 
 
-btn_generate.addEventListener('click', function(){
+// btn_generate.addEventListener('click', function(){
+btn_generate.addEventListener('keyup', function(e){
 		let first_operand = document.getElementById('txtFirstOperand');
 		let second_operand = document.getElementById('txtSecondOperand');
 		let slt_first_operand = document.getElementById('sltDigitNumber_1');
@@ -65,9 +66,9 @@ btn_generate.addEventListener('click', function(){
 
 		txt_result.focus();
 		start_time = performance.now();
-
-
 });
+
+
 
 btn_submit.addEventListener('click', function(){
 	calculation_time = performance.now() - start_time;
@@ -80,6 +81,9 @@ btn_submit.addEventListener('click', function(){
 	document.getElementById('pGivenAnswer').innerHTML = user_result;
 	document.getElementById('pError').innerHTML = err + ' %';
 	document.getElementById('pTime').innerHTML = Math.round(calculation_time) + ' ms';	
+	document.getElementById('btnGenerate').focus();
+	txt_result.blur();
+
 });
 
 btn_options.addEventListener('click', function(){
@@ -92,9 +96,12 @@ btn_options.addEventListener('click', function(){
 	}
 });
 
-txt_result.addEventListener('keydown', function(e){
-	if (e.keyCode === 13) {
+txt_result.addEventListener('keyup', function(e){
+	if (e.code === 'Enter') {
+	// if (e.keyCode === 13) {
 		btn_submit.click();
+		// txt_result.blur();
+		// alert(document.activeElement);
 	}
 });
 // !Добавить защиту от дурака: сначала нажать submit без предварительного нажатия btn_generate
