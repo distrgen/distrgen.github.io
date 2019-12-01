@@ -43,6 +43,10 @@ h3 {
 	justify-content: center;
 }
 
+#stnOptions p {
+	margin: 0px;
+}
+
 #stnProblem {
 	display: flex;
 	flex-direction: row;
