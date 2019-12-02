@@ -122,6 +122,10 @@ txt_result.addEventListener('keyup', function(e){
 		// alert(document.activeElement);
 	}
 });
+
+document.getElementById('txtTesting').addEventListener('keyup', function(e){
+	alert(e.code);
+});
 // !Добавить защиту от дурака: сначала нажать submit без предварительного нажатия btn_generate
 // !Проверять, ввел ли пользователь вообще какое-либо число
 // !Switch'и ужасны!
